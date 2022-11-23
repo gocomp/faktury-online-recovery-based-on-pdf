@@ -148,6 +148,7 @@ if (isset($_POST["submit"])) {
             $faktura['f_number'] = $faktcis; // Ak chceme vypočítať číslo automaticky, toto pole neuvedieme
             $faktura['f_vs'] = $pages[$i]->getTextXY(525.68, 778.55)[0][1]; // Variabilný symbol
             $faktura['f_ks'] = "308"; // Konštantný symbol
+			$faktura['f_style'] = "standard";
             $faktura['f_date_issue'] = $datum[1]; // Dátum vystavenia vo formáte RRRR-MM-DD
             $faktura['f_date_delivery'] = $datum[2]; // Dátum dodania vo formáte RRRR-MM-DD
             $faktura['f_date_due'] = $datum[3]; // Dátum splatnosti vo formáte RRRR-MM-DD
