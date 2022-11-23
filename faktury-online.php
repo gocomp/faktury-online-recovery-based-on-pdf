@@ -152,10 +152,11 @@ if (isset($_POST["submit"])) {
             $faktura['f_date_issue'] = $datum[1]; // Dátum vystavenia vo formáte RRRR-MM-DD
             $faktura['f_date_delivery'] = $datum[2]; // Dátum dodania vo formáte RRRR-MM-DD
             $faktura['f_date_due'] = $datum[3]; // Dátum splatnosti vo formáte RRRR-MM-DD
-            $faktura['f_payment'] = "prevod";//@$prevobj[0][1];   //Druh plaby. Na výber sú "prevod", "poukazka",
+            $faktura['f_payment'] = "prevod";//@$prevobj[0][1];   //Druh plaby. Na výber sú "prevod","karta"
             $faktura['f_language'] = "SK";   // Jazyk faktúry: SK, CZ, EN, DE, ES, IT, FR, HU, PL, NO, RU
             $faktura['f_qr'] = "1";   // Zobraziť QR kód (PAY by square)
             // $faktura['f_order'] = "";; //OBJ-2017-514";  //Číslo objednávky
+			$faktura['f_paid'] = 0; //Už uhradené. Suma.
             $data['d'] = $dodavatel;
             $data['o'] = $odberatel;
             $data['f'] = $faktura;
