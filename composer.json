@@ -1,0 +1,6 @@
+{
+    "require": {
+        "smalot/pdfparser": "^2.2",
+        "rakibtg/sleekdb": "^2.15"
+    }
+}
