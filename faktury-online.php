@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     $data['apitest'] = 1; //hodnota môže byť 1 alebo 0
     $pdffile = $_FILES["pdffile"]["tmp_name"];
     $dodavatel = array();
-    $dodavatel['d_id'] = $rowsetting[0]['email'];;
+    $dodavatel['d_id'] = $rowsetting[0]['d_id'];;
 
     $parser = new \Smalot\PdfParser\Parser();
     $pdf = $parser->parseFile($pdffile);
@@ -125,8 +125,6 @@ if (isset($_POST["submit"])) {
                         $polozka['p_vat'] = 0;
                     }
                 }
-                echo $rowc[1];
-                echo "</br>";
                 if (($rowc[1] == "Celkom s DPH") or ($rowc[1] == "Celková cena")) {
                     $rowex = true;
                     $polozka = array();
